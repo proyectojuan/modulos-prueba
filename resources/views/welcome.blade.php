@@ -1,45 +1,57 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+@section('content')
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading"><strong>Modulos</strong></div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="" alt="">
+								<div class="caption">
+									<h3>Modulo #1</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, deleniti? </p>
+									<p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="" alt="">
+								<div class="caption">
+									<h3>Modulo #2</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, aperiam. </p>
+									<p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="" alt="">
+								<div class="caption">
+									<h3>Modulo #3</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, tempora! </p>
+									<p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="" alt="">
+								<div class="caption">
+									<h3>Modulo #4</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, perferendis! </p>
+									<p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@endsection
