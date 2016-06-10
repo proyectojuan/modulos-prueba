@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Modulos Prueba</title>
+    <title>{{ trans('landing.application_name') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <style>
-        body {
+        body,html {
             font-family: 'Lato';
+            height: 100%;
         }
-
         .fa-btn {
             margin-right: 6px;
         }
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-static-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -36,17 +36,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                <a class="navbar-brand" href="#">
+                    {{ trans('landing.application_name') }}
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Inicio</a></li>
+                    <li><a href="{{ url('/') }}">{{ trans('landing.home_link') }} </a></li>
+                    <li class="pull-rigth"><a href="{{ url('/login') }}">{{ trans('landing.login_link') }}</a></li>
+                    <li class="pull-rigth"><a href="{{ url('/register') }}">{{ trans('landing.register_link') }}</a></li>
                 </ul>
             </div>
         </div>
