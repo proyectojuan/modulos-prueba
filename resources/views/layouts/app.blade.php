@@ -45,9 +45,13 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">{{ trans('landing.home_link') }} </a></li>
-                    <li class="pull-rigth"><a href="{{ url('/login') }}">{{ trans('landing.login_link') }}</a></li>
-                    <li class="pull-rigth"><a href="{{ url('/register') }}">{{ trans('landing.register_link') }}</a></li>
+                    <li><a href="<?php echo (Auth::check()) ? url('/home') : url(''); ?>">{{ trans('landing.home_link') }} </a></li>
+                    @if (Auth::guest())
+                        <li class="pull-rigth"><a href="{{ url('/login') }}">{{ trans('landing.login_link') }}</a></li>
+                        <li class="pull-rigth"><a href="{{ url('/register') }}">{{ trans('landing.register_link') }}</a></li>
+                    @else
+                        <li class="pull-rigth"><a href="{{ url('/logout') }}">{{ trans('landing.logout_link') }}</a></li>
+                    @endif
                 </ul>
             </div>
         </div>
