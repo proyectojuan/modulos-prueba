@@ -6,7 +6,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading"><strong>{{ trans('welcome.title_modules_landing') }} </strong></div>
 				<div class="panel-body">
-					<div class="row">
+					<div class="row text-center">
 						<div class="col-sm-6 col-md-4">
 							<div class="thumbnail">
 								<img src="" alt="">

@@ -32,9 +32,7 @@
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <i class="fa fa-bars fa-2x"></i>
                 </button>
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="#">
@@ -45,10 +43,16 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo (Auth::check()) ? url('/home') : url(''); ?>">{{ trans('landing.home_link') }} </a></li>
+                    @if ((Request::url() != url('/home')) && (Request::url() != url('')))
+                        <li><a href="<?php echo (Auth::check()) ? url('/home') : url('');?>">{{trans('landing.home_link')}}</a></li>
+                    @endif
                     @if (Auth::guest())
-                        <li class="pull-rigth"><a href="{{ url('/login') }}">{{ trans('landing.login_link') }}</a></li>
-                        <li class="pull-rigth"><a href="{{ url('/register') }}">{{ trans('landing.register_link') }}</a></li>
+                        @if (!strpos(Request::url(),'/login'))
+                            <li class="pull-rigth"><a href="{{ url('/login') }}">{{ trans('landing.login_link') }}</a></li>
+                        @endif
+                        @if (!strpos(Request::url(),'/register'))
+                            <li class="pull-rigth"><a href="{{ url('/register') }}">{{ trans('landing.register_link') }}</a></li>
+                        @endif
                     @else
                         <li class="pull-rigth"><a href="{{ url('/logout') }}">{{ trans('landing.logout_link') }}</a></li>
                     @endif
@@ -56,9 +60,7 @@
             </div>
         </div>
     </nav>
-
     @yield('content')
-
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
