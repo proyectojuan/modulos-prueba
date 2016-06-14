@@ -12,15 +12,6 @@
 */
 Route::group(['middleware'=>['lang']],function(){
 	Route::get('/', function () {
-		function getUserLEnguage(){
-	        $idioma = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
-	        return $idioma;
-	    }
-	    $user_language=getUserLEnguage();
-	    if($user_language == 'es' || $user_language == 'en')
-			session(['lang'=>$user_language]);    
-		else
-			session(['lang'=>'en']);
 		return view('welcome');
 	});
 	Route::auth();

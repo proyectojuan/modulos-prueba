@@ -17,6 +17,13 @@ class LangMiddleware
     {
         if(!empty(session('lang'))){
             \App::setlocale(session('lang'));
+        }else{
+            $idioma = substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+            if($idioma == 'es' || $idioma == 'en')
+                session(['lang'=>$idioma]);
+            else
+                session(['lang'=>'en']);
+            \App::setlocale(session('lang'));
         }
         return $next($request);
     }
