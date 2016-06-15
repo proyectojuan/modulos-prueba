@@ -3,7 +3,7 @@
 return[
 	//welcome.blade.php
 	'title_modules_landing' => 'Landing Modules',
-
+	
 	//login.blade.php
 	'login_email_label' => 'E-Mail Address',
 	'login_password_label' => 'password',

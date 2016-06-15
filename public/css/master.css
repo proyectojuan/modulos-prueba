@@ -1,0 +1,7 @@
+body,html{
+	height: 100%;
+}
+#app-layout > nav:first-child{
+	height: 8%;
+	margin-bottom: 0px;
+}
