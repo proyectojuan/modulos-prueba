@@ -16,4 +16,8 @@ Route::group(['middleware'=>['lang']],function(){
 	});
 	Route::auth();
 	Route::get('/home', 'HomeController@index');
+
+	Route::group(['prefix'=>'eventos'],function(){
+		Route::get('/calendario', 'EventController@index');
+	});
 });
