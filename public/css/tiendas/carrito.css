@@ -1,0 +1,43 @@
+#contenidoCarrito{
+	height: 94.4%;
+	position: relative;
+}
+#contenidoCarrito > #menu {
+    /*border: 1px solid #f00;*/
+    height: 5%;
+    width: 100%;
+    position: fixed;
+}
+#contenidoCarrito > #menu > ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    height: 100%;
+}
+#contenidoCarrito > #menu > ul > li {
+    align-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    border:1px solid transparent;
+	font-size: 1.2em;
+    height: 100%;
+    justify-content: center;
+    margin: 0px -2px;
+    padding: 0px 1%;
+
+    -webkit-transition:all 0.2s ease-in;
+    -moz-transition:all 0.2s ease-in;
+    -ms-transition:all 0.2s ease-in;
+    -o-transition:all 0.2s ease-in;
+    transition:all 0.2s ease-in;
+}
+#contenidoCarrito > #menu > ul > li:hover {
+	cursor:pointer;
+	background-color: #eee;
+	border:1px solid #DDDDDD;
+}
+#contenidoCarrito > #menu > ul > li:active {
+	outline:none;
+	background-color: rgba(0,0,0,0.2);
+	color:#fff;
+}
