@@ -1,7 +1,7 @@
 <?php 
 
 return [
-	'title_modules_landing_events' => 'Modulos Eventos',
+	'title_modules' => 'Modulos',
 
 	//login.blade.php
 	'login_email_label' => 'Correo Electronico',

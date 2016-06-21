@@ -1,0 +1,47 @@
+#calendar > thead > tr > th{
+	background-color: #aaa;
+	color           : #fff;
+	text-align      : center;
+}
+#calendar > tbody > tr > td{
+	text-align: center;
+}
+#calendar > tbody > tr > td.evento{
+	border-bottom: 2px solid #FFA5A5;
+}
+#calendar > tbody > tr > td.evento:hover{
+	-webkit-box-shadow:0px 4px 7px 2px #eee inset;
+	-moz-box-shadow:0px 4px 7px 2px #eee inset;
+	-ms-box-shadow:0px 4px 7px 2px #eee inset;
+	-o-box-shadow:0px 4px 7px 2px #eee inset;
+	box-shadow:0px 4px 7px 2px #eee inset;
+	cursor:pointer;
+}
+#indicadores_carousel{
+	bottom: -20px;
+}
+#indicadores_carousel > li{
+	background-color: #ccc;
+	-webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	-ms-transition:all 0.2s;
+	-o-transition:all 0.2s;
+	transition:all 0.2s;
+}
+#indicadores_carousel > li.active{
+	background-color: #999;
+	-webkit-transform:scale(1.4);
+	-moz-transform:scale(1.4);
+	-ms-transform:scale(1.4);
+	-o-transform:scale(1.4);
+	transform:scale(1.4);
+}
+@media (max-width: 600px) {
+	#indicadores_carousel{
+		width: 100%!important;
+		margin-left: -50%!important;
+	}
+	.carousel-indicators > li{
+		margin: 0px 1.5%!important;
+	}
+}

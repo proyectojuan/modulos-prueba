@@ -2,7 +2,7 @@
 
 return[
 	//welcome.blade.php
-	'title_modules_landing_events' => "Event's Modules",
+	'title_modules' => "Modules",
 	
 	//login.blade.php
 	'login_email_label' => 'E-Mail Address',

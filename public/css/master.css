@@ -2,6 +2,6 @@ body,html{
 	height: 100%;
 }
 #app-layout > nav:first-child{
-	height: 8%;
+	height: 5%;
 	margin-bottom: 0px;
 }

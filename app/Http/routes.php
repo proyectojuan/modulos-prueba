@@ -20,4 +20,7 @@ Route::group(['middleware'=>['lang']],function(){
 	Route::group(['prefix'=>'eventos'],function(){
 		Route::get('/calendario', 'EventController@index');
 	});
+	Route::group(['prefix'=>'tiendas'],function(){
+		Route::get('/carrito', 	  'ShopController@cart');
+	});
 });
