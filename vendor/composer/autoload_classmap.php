@@ -6,8 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_06_21_141823_create_categories_table.php',
     'CreateEventsTable' => $baseDir . '/database/migrations/2016_06_16_150847_create_events_table.php',
+    'CreateForeignsTable' => $baseDir . '/database/migrations/2016_06_22_104101_create_foreigns_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateProductsTable' => $baseDir . '/database/migrations/2016_06_22_103758_create_products_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
@@ -513,6 +516,10 @@ return array(
     'SebastianBergmann\\RecursionContext\\Exception' => $vendorDir . '/sebastian/recursion-context/src/Exception.php',
     'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => $vendorDir . '/sebastian/recursion-context/src/InvalidArgumentException.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
+    'TableCategories' => $baseDir . '/database/seeds/TableCategories.php',
+    'TableEvents' => $baseDir . '/database/seeds/TableEvents.php',
+    'TableProducts' => $baseDir . '/database/seeds/TableProducts.php',
+    'TableUsers' => $baseDir . '/database/seeds/TableUsers.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
 );

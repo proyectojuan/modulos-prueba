@@ -1,5 +1,5 @@
 #contenidoCarrito{
-	height: 94.4%;
+	height: 93%;
 	position: relative;
 }
 #contenidoCarrito > #menu {
@@ -24,6 +24,7 @@
     justify-content: center;
     margin: 0px -2px;
     padding: 0px 1%;
+    text-transform: capitalize;
 
     -webkit-transition:all 0.2s ease-in;
     -moz-transition:all 0.2s ease-in;
@@ -40,4 +41,24 @@
 	outline:none;
 	background-color: rgba(0,0,0,0.2);
 	color:#fff;
+}
+#ShowCartButton > a > strong {
+    font-size: 1.2em;
+}
+
+#productosCarrito {
+    margin-top: 6%;
+}
+#productosCarrito > div {
+    border: 1px solid #000;
+    margin: 0px 1%;
+}
+#productosCarrito > div > small{
+    font-size: 1.3em;
+}
+#productosCarrito > div > .row > button {
+    margin:5px 0px;
+    background-color: transparent;
+    border-color: #4790FF;
+    color:#4790FF;
 }

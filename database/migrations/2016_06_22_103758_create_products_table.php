@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventsTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id')->unsigned()->index();
             $table->string('nombre');
             $table->text('descripcion');
-            $table->date('fecha');
-            $table->time('hora');
+            $table->double('precio');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('events');
+        Schema::drop('products');
     }
 }

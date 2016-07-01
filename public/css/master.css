@@ -1,7 +1,11 @@
+@font-face{
+	font-family: 'lato';
+	src:url(../fonts/Lato-Regular.ttf);
+}
 body,html{
 	height: 100%;
 }
-#app-layout > nav:first-child{
+#app-layout > nav{
 	height: 5%;
 	margin-bottom: 0px;
 }

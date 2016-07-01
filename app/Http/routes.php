@@ -21,6 +21,8 @@ Route::group(['middleware'=>['lang']],function(){
 		Route::get('/calendario', 'EventController@index');
 	});
 	Route::group(['prefix'=>'tiendas'],function(){
-		Route::get('/carrito', 	  'ShopController@cart');
+		Route::get('/carrito'		   ,'ShopController@cart');
+		Route::get('/addCarrito/{id}'  ,'ShopController@addCart');
+		Route::get('/showCarrito' 	   ,'ShopController@show');
 	});
 });
